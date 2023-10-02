@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section id="about" className="about">
       <div className="container" style={{ height: "27rem" }}>
-        <div className="row">
+        <div className="row h-75">
           <div
             className="col-lg-6 order-1 order-lg-2 "
             data-aos="zoom-in"
@@ -47,9 +47,9 @@ export default function About() {
               pada hewan peliharaan atau hewan ternak tanpa perlu melakukan
               pembedahan besar.
             </p>
-            <a href="#services" className="read-more text-decoration-none">
+            {/* <a href="#services" className="read-more text-decoration-none">
               Read More
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

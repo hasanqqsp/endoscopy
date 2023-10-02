@@ -75,14 +75,14 @@ export default function Header() {
               activeSection={activeSection}
             />
 
-            <li className="py-0">
+            {/* <li className="py-0">
               <a
                 className="getstarted scrollto text-decoration-none"
                 href="#about"
               >
                 Ayo Mulai
               </a>
-            </li>
+            </li> */}
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
