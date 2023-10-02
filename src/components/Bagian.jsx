@@ -3,7 +3,7 @@
 // import fluidManagementImage from "../assets/img/part/suction-pump.png";
 // import selangImage from "../assets/img/part/selang-endoskop.png";
 // import printerImage from "../assets/img/part/printer.png";
-// import lightSourceImage from "../assets/img/part/lightSource.png";
+// import lightSourceImage from "../assets/img/part/lightsource.png";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // import { Canvas, useLoader } from "@react-three/fiber";
 // import { OrbitControls } from "@react-three/drei";
@@ -183,7 +183,7 @@ import monitorImage from "../assets/img/part/monitor.png";
 import fluidManagementImage from "../assets/img/part/suction-pump.png";
 import selangImage from "../assets/img/part/selang-endoskop.png";
 import printerImage from "../assets/img/part/printer.png";
-import lightSourceImage from "../assets/img/part/lightSource.png";
+import lightSourceImage from "../assets/img/part/lightsource.png";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
