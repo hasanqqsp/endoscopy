@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react";
-import img1 from "../assets/img/endoskopi-img.png";
+import { useRef } from "react";
 import Iframe from "react-iframe";
 export default function About() {
   const iframe = useRef();
@@ -23,7 +22,7 @@ export default function About() {
                 allowfullscreen
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-                allow="autoplay; fullscreen; xr-spatial-tracking; cross-origin"
+                allow="autoplay; fullscreen; xr-spatial-tracking;"
                 xr-spatial-tracking
                 execution-while-out-of-viewport
                 execution-while-not-rendered

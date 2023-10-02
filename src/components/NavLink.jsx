@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export default function NavLink({ href, activeSection, text }) {
   console.log(activeSection, href, activeSection === href);
   const onNavigate = (ev) => {
