@@ -6,7 +6,7 @@
   "homepage": "https://hasanqqsp.github.io/endoscopy",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir dist/endoscopy",
+    "build": "vite build ",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy" : "npm run build",
