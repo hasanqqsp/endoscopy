@@ -2,13 +2,10 @@ import { useRef } from "react";
 import Iframe from "react-iframe";
 export default function About() {
   const iframe = useRef();
-  // useEffect(() => {
-  //   const frame = iframe.current.childNodes[0].contentWindow;
-  //   console.log(frame.document.querySelector("watermark"));
-  // }, []);
+
   return (
     <section id="about" className="about">
-      <div className="container" style={{ height: "27rem" }}>
+      <div className="container" style={{ minHeight: "27rem" }}>
         <div className="row h-75">
           <div
             className="col-lg-6 order-1 order-lg-2 "
@@ -16,6 +13,7 @@ export default function About() {
             data-aos-delay="150"
           >
             <div className="sketchfab-embed-wrapper h-100 mx-1" ref={iframe}>
+              <link rel="preconnect" href="https://media.sketchfab.com" />
               <Iframe
                 title="Endoskopi"
                 frameBorder="0"
@@ -37,7 +35,7 @@ export default function About() {
             data-aos="fade-right"
           >
             <h3>Apa itu Endoskopi</h3>
-            <p className="fs-5" style={{ textAlign: "justify" }}>
+            <p className="fs-5 md-fs-6" style={{ textAlign: "justify" }}>
               Endoskopi hewan adalah prosedur medis untuk memeriksa organ-organ
               dalam tubuh hewan, seperti lambung, usus, saluran pernapasan, dan
               berbagai bagian lainnya, tanpa melakukan pembedahan yang invasif.

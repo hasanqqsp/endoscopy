@@ -3,6 +3,8 @@ import NavLink from "./NavLink";
 export default function Header() {
   const [activeSection, setActiveSection] = useState("hero");
   const [scroll, setScroll] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById("hero");
@@ -42,7 +44,9 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const onToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header id="header" className={`fixed-top ${scroll && "header-scrolled"}`}>
       <div className="container d-flex align-items-center justify-content-between">
@@ -52,7 +56,7 @@ export default function Header() {
           </a>
         </h1>
 
-        <nav id="navbar" className="navbar">
+        <nav id="navbar" className={`navbar ${isOpen ? "navbar-mobile" : ""}`}>
           <ul>
             <NavLink
               href="#hero"
@@ -74,17 +78,11 @@ export default function Header() {
               text={"Prosedur"}
               activeSection={activeSection}
             />
-
-            {/* <li className="py-0">
-              <a
-                className="getstarted scrollto text-decoration-none"
-                href="#about"
-              >
-                Ayo Mulai
-              </a>
-            </li> */}
           </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
+          <i
+            className={`bi ${isOpen ? "bi-x" : "bi-list"} mobile-nav-toggle`}
+            onClick={onToggle}
+          ></i>
         </nav>
       </div>
     </header>

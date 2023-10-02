@@ -65,60 +65,71 @@ export default function PartOf() {
     setIndex(index);
   };
   return (
-    <section
-      //style={{ height: `50rem` }}
-      className="portfolio py-2 faq"
-      id="portfolio"
-    >
+    <section className="portfolio py-2 faq" id="portfolio">
       {console.log(index)}
-      <h1 className="text-center text-light pt-3">BAGIAN - BAGIAN ENDOSKOP</h1>
+      <h1 className="text-center text-light pt-3 mb-3">
+        BAGIAN - BAGIAN ENDOSKOP
+      </h1>
       <style>
         {`
         .carousel-inner {
-          height:100%
+          height:100%;
+          flex: 0 0 auto;
+          width: 83.33333333%;
+          margin: 0 auto;
         }
         `}
       </style>
-      <Container className="p-5 pt-0">
-        <Row style={{ height: `42rem` }}>
+      <Container
+        fluid={"sm"}
+        className="
+       pt-0"
+      >
+        <Row style={{ minHeight: `42rem` }}>
           <Col className="mh-100">
             <Carousel
               activeIndex={index}
               onSelect={handleSelect}
               interval={null}
-              className=" w-full pb-5 h-100 mh-100"
+              className="w-full pb-5 h-100 mh-100 col-10 mx-auto"
               data-aos="fade-in"
               data-aos-delay="100"
             >
               {listBagian.map((bagian, index) => (
                 <Carousel.Item
-                  className="text-center h-100"
+                  className="text-center  overflow-auto "
                   key={index}
-                  style={{ paddingBottom: "12rem" }}
                 >
-                  <div
-                    className="sketchfab-embed-wrapper h-100 ratio mx-auto"
-                    style={{ maxWidth: "54rem" }}
+                  <Row
+                    className="h-100 ratio ratio-16x9 w-100 mx-auto"
+                    style={{ maxHeight: "32rem" }}
                   >
-                    <Iframe
-                      title="printer"
-                      frameBorder="0"
-                      allowfullscreen
-                      mozallowfullscreen="true"
-                      webkitallowfullscreen="true"
-                      allow="autoplay; fullscreen; xr-spatial-tracking"
-                      xr-spatial-tracking
-                      execution-while-out-of-viewport
-                      execution-while-not-rendered
-                      web-share
-                      src={bagian.sketchfab}
-                      className="img-fluid h-100"
-                      style={{ maxWidth: "54rem" }}
-                    >
-                      {" "}
-                    </Iframe>
-                  </div>
-                  <Carousel.Caption className="text-start">
+                    <Col>
+                      <div
+                        className="sketchfab-embed-wrapper ratio mx-auto"
+                        style={{ maxWidth: "60rem" }}
+                      >
+                        <Iframe
+                          title="printer"
+                          frameBorder="0"
+                          allowfullscreen
+                          mozallowfullscreen="true"
+                          webkitallowfullscreen="true"
+                          allow="autoplay; fullscreen; xr-spatial-tracking"
+                          xr-spatial-tracking
+                          execution-while-out-of-viewport
+                          execution-while-not-rendered
+                          web-share
+                          src={bagian.sketchfab}
+                          className="img-fluid h-100 "
+                          style={{ maxWidth: "54rem" }}
+                        >
+                          {" "}
+                        </Iframe>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Carousel.Caption className="text-start position-static container mt-2">
                     <h3>{bagian.name}</h3>
                     <p>{bagian.description}</p>
                   </Carousel.Caption>
