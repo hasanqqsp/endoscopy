@@ -1276,11 +1276,7 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  background: linear-gradient(
-    42deg,
-    rgba(130, 59, 128, 0.7) 0%,
-    rgba(130, 59, 128, 1) 100%
-  );
+  background: #823b80;
 }
 
 .faq .section-title h2,
