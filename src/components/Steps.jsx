@@ -72,7 +72,11 @@ export default function Steps() {
             Berikut adalah langkah-langkah utama penggunaan endoskop pada hewan
           </p>
         </div>
-
+        <style>
+          {`.services .icon-box .icon svg path {
+          fill: #823b80;
+        }`}
+        </style>
         <div className="row gy-4">
           {langkah_langkah.map((langkah, index) => (
             <div
@@ -81,22 +85,27 @@ export default function Steps() {
               data-aos-delay={(index + 1) * 40}
               key={index}
             >
-              <div className={`icon-box py-4 iconbox-${iconbox_color[index]}`}>
+              <div className={`icon-box py-4 iconbox-purple`}>
                 <div className="icon">
                   <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                    height=""
+                    width=""
+                    version="1.1"
+                    id="Layer_1"
+                    viewBox="0 0 32 32"
+                    enableBackground="new 0 0 32 32"
+                    xmlSpace="preserve"
                   >
-                    <path
-                      stroke="none"
-                      strokeWidth="0"
-                      fill="#f5f5f5"
-                      d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"
-                    ></path>
+                    <path d="M24,6H8c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5h16c2.8,0,5-2.2,5-5V11C29,8.2,26.8,6,24,6z" />
                   </svg>
-                  <i>{index + 1}</i>
+                  <i
+                    style={{ "font-style": "normal", color: "white" }}
+                    className="fw-semibold"
+                  >
+                    {index + 1}
+                  </i>
                 </div>
                 <h4>{langkah.title}</h4>
                 <p>{langkah.description}</p>

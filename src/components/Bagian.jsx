@@ -46,7 +46,7 @@ export default function PartOf() {
       name: "Selang Endoskop",
       img: selangImage,
       sketchfab:
-        "https://sketchfab.com/models/91e2f11edfd94fc0a8fd0b669fecba24/embed?autostart=1",
+        "https://sketchfab.com/models/611d25bde89c4836aaf341473d38c174/embed?autostart=1",
       description:
         "Endoskop adalah pipa tipis yang dilengkapi dengan lensa, kamera, dan sumber cahaya. Pipa ini dimasukkan ke dalam tubuh hewan melalui lubang alami atau buatan. Endoskop tersedia dalam berbagai ukuran dan bentuk, masing-masing dirancang untuk memeriksa organ atau sistem tubuh tertentu.",
     },
